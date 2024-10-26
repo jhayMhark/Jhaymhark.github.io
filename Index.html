@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Second Monthsary Love</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-image: url('https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI0LTAxL3Jhd3BpeGVsb2ZmaWNlOV9zaW1wbGlmaWVkX2hlYXJ0c19ib3JkZXJfZ3JhZGllbnRfYmFja2dyb3VuZGFfcF80YmVjNGQ3ZC03MzM0LTRiOGItYmUxMC1jZmU4ZTg2NjQ5YzBfMS5qcGc.jpg'); /* Replace with the image URL */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    .card {
+      width: 300px;
+      padding: 20px;
+      border-radius: 15px;
+      background-color: rgba(255, 182, 193, 0.9); /* Semi-transparent background */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .card h2 {
+      color: #333;
+    }
+
+    .card p {
+      display: none;
+      color: #333;
+      font-size: 18px;
+      margin-top: 15px;
+    }
+
+    .card button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #ff6f61;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 10px;
+    }
+
+    .card button:hover {
+      background-color: #e65c54;
+    }
+
+    .heart {
+      font-size: 50px;
+      color: #ff6f61;
+      margin-bottom: 15px;
+      animation: pulse 1.5s infinite;
+    }
+
+    /* Add an animated image */
+    .animated-image {
+      width: 100px;
+      height: 100px;
+      margin-top: 10px;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+    }
+
+    /* Animation for the image */
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    /* Heart Animation */
+    .floating-heart {
+      position: absolute;
+      font-size: 24px;
+      color: #ff6f61;
+      animation: float 5s infinite;
+      opacity: 0;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) scale(0.8);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) scale(1.2);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="heart">❤️</div>
+    <h2>To My Cute GirlFriend, Lalove,Future Wife </h2>
+    <!-- Add animated image here -->
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs99kTj5aerW4x2u4RwLw1B3XLLmTUF8Xz7KORZ8GO5q2XC3K_R3cBqG8&s=10"alt="Animated Picture" class="animated-image">
+    <button onclick="revealMessage()">Click for a Surprise</button>
+    <p id="message">Love Happy Second Monthsary satin I know paulit ulit ko na ng sinabi sayo to pero wag mong kakalimutan Mahal na Mahal kita!! Thank you so much dahil sinagot mo ko at isa ka sa magandang nangyari sakin ngayong taon Mahal na Mahal kita Carla Jean Carreon ❤️</p>
+  </div>
+
+  <script>
+    function revealMessage() {
+      document.getElementById("message").style.display = "block";
+    }
+
+    // Function to create floating hearts
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('floating-heart');
+      heart.innerText = '❤️';
+
+      // Random position for the heart
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = 3 + Math.random() * 2 + 's';
+
+      document.body.appendChild(heart);
+
+      // Remove the heart after the animation
+      setTimeout(() => {
+        heart.remove();
+      }, 5000);
+    }
+
+    // Generate multiple hearts at intervals
+    setInterval(createHeart, 300);
+  </script>
+
+</body>
+</html>
